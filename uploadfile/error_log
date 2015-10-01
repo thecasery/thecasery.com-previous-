@@ -1,0 +1,11 @@
+[10-Aug-2015 14:54:10 America/Denver] PHP Notice:  Undefined index: fileToUpload in /home1/thecaser/public_html/uploadfile/upload.php on line 3
+[10-Aug-2015 14:54:48 America/Denver] PHP Notice:  Undefined index: fileToUpload in /home1/thecaser/public_html/uploadfile/upload.php on line 3
+[10-Aug-2015 18:50:19 America/Denver] PHP Warning:  getimagesize(): Filename cannot be empty in /home1/thecaser/public_html/uploadfile/upload.php on line 8
+[17-Aug-2015 12:57:54 America/Denver] PHP Warning:  getimagesize(): Filename cannot be empty in /home1/thecaser/public_html/uploadfile/upload.php on line 8
+[21-Aug-2015 18:45:31 America/Denver] PHP Parse error:  syntax error, unexpected ';' in /home1/thecaser/public_html/uploadfile/upload.php on line 4
+[21-Aug-2015 18:46:58 America/Denver] PHP Parse error:  syntax error, unexpected ';' in /home1/thecaser/public_html/uploadfile/upload.php on line 4
+[21-Aug-2015 18:49:39 America/Denver] PHP Notice:  Undefined index: cname in /home1/thecaser/public_html/uploadfile/upload.php on line 3
+[21-Aug-2015 18:53:41 America/Denver] PHP Notice:  Undefined index: cname in /home1/thecaser/public_html/uploadfile/upload.php on line 4
+[21-Aug-2015 18:56:17 America/Denver] PHP Warning:  move_uploaded_file(uploads//weqewr/2.jpg): failed to open stream: No such file or directory in /home1/thecaser/public_html/uploadfile/upload.php on line 39
+[21-Aug-2015 18:56:17 America/Denver] PHP Warning:  move_uploaded_file(): Unable to move '/var/tmp/phpZckrcS' to 'uploads//weqewr/2.jpg' in /home1/thecaser/public_html/uploadfile/upload.php on line 39
+[04-Sep-2015 07:10:59 America/Denver] PHP Notice:  Undefined index: fileToUpload in /home1/thecaser/public_html/uploadfile/upload.php on line 4

@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>thecasery.com</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+
+
+    <!-- Custom CSS -->
+    <link href="css/agency.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/templatemo_misc.css">
+    <link href="css/templatemo_style.css" rel="stylesheet">
+    <link href="css/dropzone.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,600' rel='stylesheet' type='text/css'>
+
+	<!-- dropzone.js-->
+    <!--[if lt IE 9]>
+	<script type="text/javascript" src="libs/flashcanvas.js"></script>
+	<![endif]-->
+	<script src="js/jSignature.min.js"></script>
+    <script src="js/jSignature.js"></script>
+	<script>
+	    $(document).ready(function() {
+	        $("#signature").jSignature()
+	    })
+	</script>
+    <script src="js/dropzone.js"></script>  
+    
+    <script src="js/jquery-1.10.2.min.js"></script> 
+	<script src="js/jquery.lightbox.js"></script>
+	<script src="js/templatemo_custom.js"></script>
+	<style>
+      #map_canvas {
+        width: auto;
+        height: 400px;
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+	  function disableSubmit() {
+  document.getElementById("submit").disabled = true;
+ }
+
+  function activateButton(element) {
+
+      if(element.checked) {
+        document.getElementById("submit").disabled = false;
+       }
+       else  {
+        document.getElementById("submit").disabled = true;
+      }
+
+  }
+      function initialize() {
+        var mapCanvas = document.getElementById('map_canvas');
+        var mapOptions = {
+          center: new google.maps.LatLng(34.025543,-118.457817),
+          zoom: 15,
+		  scrollwheel: false,
+          streetViewControl : true,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+		var myLatlng = new google.maps.LatLng(34.025543,-118.457817);
+        var map = new google.maps.Map(mapCanvas, mapOptions)
+		var marker = new google.maps.Marker({
+			  position: myLatlng,
+			  map: map,
+			  title: 'the casery'
+		  });
+      }
+	
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>   
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script>
+	$('#terms-pane').scroll(function () {
+    if ($(this).scrollTop() == $(this)[0].scrollHeight - $(this).height()) {
+        $('#submit').removeAttr('disabled');
+    }
+});
+    </script>
+
+</head>
+
+<body id="page-top" class="index" onload="disableSubmit()">
+	
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!--<a class="navbar-brand page-scroll" href="#page-top"><img src="images/TransparentSmaller.gif" alt="the casery" style="width=128px;"></a></div>-->
+                <a class="navbar-brand page-scroll" href="#page-top"><strong>the casery</strong></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li> <a class="page-scroll" href="#services">GALLERY</a> </li>
+                    <li> <a class="page-scroll" href="#portfolio">company</a></li>
+                    <li> <a class="page-scroll" href="#team">TEAM </a></li>
+                    <li><a class="page-scroll" href="#about">contest</a></li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-lead-in">Welcome to the casery!</div>
+                <div class="intro-heading">Inspiring creativity in a seriously fun way.</div>
+                <a href="#services" class="page-scroll btn btn-xl">Tell Me More</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services">
+    <div class="content homepage" id="menu-1">
+    <div class="container">
+	    <div class="row templatemorow">
+    		<div class="hex col-sm-6">
+    	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(images/gallery/1.jpg);background-size: 175%;">
+             	 	<div class="overlay">
+						<a href="images/gallery/1.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+					</div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="hex col-sm-6">
+    	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(images/gallery/2.jpg);background-size: 175%;">
+              	<div class="overlay">
+						<a href="images/gallery/2.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+					</div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="hex col-sm-6  templatemo-hex-top2">
+    	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(images/gallery/3.jpg);background-size: 175%;">
+              	<div class="overlay">
+						<a href="images/gallery/3.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+					</div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="hex col-sm-6  templatemo-hex-top3">
+    	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(images/gallery/4.jpg);background-size: 175%;">
+              	<div class="overlay">
+						<a href="images/gallery/4.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+					</div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="hex col-sm-6  templatemo-hex-top3">
+    	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(images/gallery/5.jpg);background-size: 175%;">
+              		<div class="overlay">
+						<a href="images/gallery/5.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+					</div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+  	     <div class="hex col-sm-6 hex-offset templatemo-hex-top1 templatemo-hex-top2">
+    	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(images/gallery/6.jpg);">
+              		<div class="overlay">
+						<a href="images/gallery/6.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+					</div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+     <div class="hex col-sm-6 templatemo-hex-top1 templatemo-hex-top3">
+    	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(images/gallery/7.jpg);">
+              		<div class="overlay">
+						<a href="images/gallery/7.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+					</div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+      <div class="hex col-sm-6 templatemo-hex-top1  templatemo-hex-top3">
+      	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(images/gallery/8.jpg);background-size: 175%;">
+              		<div class="overlay">
+						<a href="images/gallery/8.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+					</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hex col-sm-6 templatemo-hex-top1  templatemo-hex-top2">
+      	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(images/gallery/9.jpg);background-size: 175%;">
+              		<div class="overlay">
+						<a href="images/gallery/9.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+					</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    	</div>
+	</div>
+    <div class="container answer_list templatemo_gallerytop hidden-xs">
+	    <div class="row templatemorow">
+    		<div class="hex col-sm-6">
+    	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(images/gallery/10.jpg);background-size: 235%;">
+             	 	<div class="overlay">
+						<a href="images/gallery/10.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+					</div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="hex col-sm-6">
+    	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(images/gallery/11.jpg);background-size: 175%;">
+              	<div class="overlay">
+						<a href="images/gallery/11.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+					</div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="hex col-sm-6  templatemo-hex-top2">
+    	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(images/gallery/12.jpg);background-size: 175%;">
+              	<div class="overlay">
+						<a href="images/gallery/12.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+					</div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="hex col-sm-6  templatemo-hex-top3">
+    	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(images/gallery/13.jpg);background-size: 175%;">
+              	<div class="overlay">
+						<a href="images/gallery/13.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+					</div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="hex col-sm-6  templatemo-hex-top3">
+    	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(images/gallery/14.jpg);background-size: 175%;">
+              		<div class="overlay">
+						<a href="images/gallery/14.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+					</div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  	     <div class="hex col-sm-6 hex-offset templatemo-hex-top1 templatemo-hex-top2">
+    	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(images/gallery/15.jpg);background-size: 175%;">
+              		<div class="overlay">
+						<a href="images/gallery/15.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+					</div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+     <div class="hex col-sm-6 templatemo-hex-top1 templatemo-hex-top3">
+    	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(images/gallery/16.jpg);background-size: 175%;">
+              		<div class="overlay">
+						<a href="images/gallery/16.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+					</div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+      <div class="hex col-sm-6 templatemo-hex-top1  templatemo-hex-top3">
+      	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(images/gallery/17.jpg);background-size: 175%;">
+              		<div class="overlay">
+						<a href="images/gallery/17.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+					</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hex col-sm-6 templatemo-hex-top1  templatemo-hex-top2">
+      	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(images/gallery/18.jpg);background-size: 175%;">
+              		<div class="overlay">
+						<a href="images/gallery/18.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+					</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    	</div>
+	</div>
+    <div class="container">
+    	<div class="row">
+        <p></p>
+        </div>
+    </div>
+    </div>
+    </section>
+
+    <!-- Portfolio Grid Section -->
+    <section id="portfolio" class="bg-light-gray" style="background-image: url(images/company_background.jpg);background-repeat:none; background-attachment: scroll; background-position: center center;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading" style="color: #010101">Company</h2>
+                    <h2 style="color: #000000;text-align: center">The casery</h2>
+                    <p> Here at The Casery, we are a group of creative, energetic people inspired by the dream of bringing you artistically driven cell phone cases.  Like our cases, everyone’s pretty unique here, and we have a lot of fun together.</p>
+                    <p> We’re each an artist in our own right, whether that art is filmmaking, photography, or graphic design.  That’s why the artists are our priority, and we aim to showcase their work in the best way possible.  We believe that everyone deserves a cell phone case that they enjoy looking at all day, every day (because, let’s face it, you look at your cell phone more often than your girlfriend).  And true art is the way to ensure that our cases offer more than just protection. </p>
+                    <hr>
+                    <h3 class="" style="color: #000000; font-size: 24px;">Our Mission</h3>
+                    <h3 class="" style="color: #000000; font-size: 18px;">We live by the case, we die by the case. Inspiring creativity in a seriously fun way.</h3>
+                  <h3 class="" style="color: #000000; font-size: 24px;">Our Dream</h3>
+                  <h3 style="color: #000000; font-style: normal; font-size: 18px;">The Casery—powering the new wave of customization. </h3>
+                  <h3 class="" style="color: #000000; font-size: 24px;">Core Values</h3>
+                  <hr>
+                  <h4 style="color: #010101; text-align: center;">Embrace Your Inner Artist</h4>
+                      <p style="text-align: center">Some of us draw. Some paint. Others design. And some can barely hold a pencil. We have a case for everyone. Whether you want to design it from the ground up, start with a base design and make it your own, or have a talented artists design it for you, The Casery has you (and your phone) covered.</p>
+                  <h4 style="color: #010101; text-align: center;"> Quality First</h4>
+                      <p style="text-align: center">The Casery believes in high quality business. Our products are designed to reach for perfection, in both artistic design and top grade materials. </p>
+                  <h4 style="color: #010101; text-align: center;">Support the World</h4>
+                      <p style="text-align: center">Our company is about expression, and we think the best way to get the word out is through The Casery. From supporting local artists, to offering non-profit designs, The Casery will use expression as a force for good.</p>
+                  <h4 style="color: #010101; text-align: center;"> Individuality</h4>
+                      <p style="text-align: center">We like people to be different. We encourage our employees to be just as unique as our cases. </p>
+                  <h4 style="color: #010101; text-align: center;">Creation That’s Fun</h4>
+                      <p style="text-align: center">The retail industry is changing rapidly, but people will always follow the fun. We see the fun as the most important part of our business, and we’d like to keep it that way.</p>
+                  <h4 style="color: #010101; text-align: center;">Stay Connected</h4>
+                      <p style="text-align: center">We’re the Case Crew for a reason. We’re friends. And we’re friends with our artists and community, too. Keep us posted, and tell us what you’d like to see next.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="team">
+    <div class="container">
+            <div class="row">
+              <div class="col-lg-12 text-center">
+                    <h2 class="section-heading" style="color: #FFFFFF; text-align: left;">about us</h2>
+                    
+              </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                  <h2>Case Crew</h2>
+                </div>
+            </div>
+       <div class="templatemo_ourteam">
+     		<div class="container templatemo_hexteam">
+            	<div class="row">
+                	<div class="col-md-3 col-sm-4">
+                        	 <div class="hexagon hexagonteam gallery-item">
+                               <div class="hexagon-in1">
+                                <div class="hexagon-in2" style="background-image: url(images/team/matthew.png);">
+                                </div>
+                            </div>
+                          </div>
+  			       </div>
+                    <div class="col-sm-8 templatemo_servicetxt" >
+                    	<h2>Matthew Harlow, CEO</h2>
+                        <p>Matthew founded The Casery in 2015 with the vision of creating a fully customizable, highly experiential marketplace.  After graduating from the University of Southern California’s Marshall School of Business in 2009, Matthew founded a test prep and private tutoring company, in which he remains active.  He has experience managing a Canadian-based SEO marketing company, as well as owning and operating a retail mail center.  A natural competitor, Matthew made a name for himself at a young age by touring the world as a competitive yo-yoer.  At the age of 16, Matthew became the World Yo-Yo Champion, in addition to two-time US National Champion and International Team Champion, where he served as team captain.  He competed at a state level in billiards and ping pong, was second in the state in Foosball, and is a State Checkers Champion.   He is artistically driven, and has been featured in the Phoenix Film Festival, has won several photography awards, and was a professional graphic design artist while attending New School for the Arts.  His diverse experience in business, world-class competition, and the arts has helped him transform his vision for The Casery into a reality.</p>
+                    </div>
+                    <div class="templatemo_servicecol2">
+                    </div>
+               </div>
+            </div>
+            <div class="clear"></div>
+            <div class="container templatemo_hexteam s_top">
+            	<div class="row">
+                	<div class="col-md-3 col-sm-4 hidden-sm hidden-md hidden-lg">
+                        	 <div class="hexagon hexagonteam gallery-item">
+                               <div class="hexagon-in1">
+                                <div class="hexagon-in2" style="background-image: url(images/team/Skyler.jpg);">
+								<div class="clear"></div>
+                                </div>
+                            </div>
+                          </div>
+  			       </div>
+                    <div class="col-sm-8 templatemo_servicetxt" >
+                      <h2>Skyler Milligan-LeCroy, Project Manager</h2>
+                      <p>Skyler graduated from the University of Southern California Marshall School of Business where he focused on project management, statistical analysis, and data research. He has extensive business experience working for LeCroy &amp; Milligan Associates, a research and evaluation firm, where he successfully implemented a large-scale project management solution. His results exceeded expectations and pioneered faster turnaround times and a smoother throughput process for all future company endeavors. Skyler is also a champion public speaker and debater and was recognized as the Arizona State Champion of Policy Debate in 2012. He focuses his free time on a new health publication about public perceptions of child abuse. Skyler’s charisma, ability to work in a fast-paced team environment, and public speaking and debate skills make him an integral project manager of The Casery.</p>
+                    </div>
+                    <div class="col-md-3 col-sm-4 hidden-xs">
+                        	 <div class="hexagon hexagonteam gallery-item">
+                               <div class="hexagon-in1">
+                                <div class="hexagon-in2" style="background-image: url(images/team/Skyler.jpg);">
+								<div class="clear"></div>
+                                </div>
+                            </div>
+                          </div>
+  			       </div>
+               </div>
+            </div>
+            <div class="clear"></div>
+            <div class="container templatemo_hexteam s_top">
+           	  <div class="row">
+                	<div class="col-md-3 col-sm-4">
+                        	 <div class="hexagon hexagonteam gallery-item">
+                               <div class="hexagon-in1">
+                                <div class="hexagon-in2" style="background-image: url(images/team/marcus.png);">
+								<div class="clear"></div>
+                                </div>
+                            </div>
+                          </div>
+  			       </div>
+                    <div class="col-sm-8 templatemo_servicetxt" >
+                      <h2> Marcus Fiebka, Creative Design Team Leader</h2>
+                      <p>Marcus is an artist and professional photographer with a background in banking. With an emphasis in financial analysis and evaluation, he currently holds his Series 6 and 63 licenses. Marcus’s background in both business and art qualifies him to lead the Creative Design Team and inspire his peers with an unrivaled sense of excitement.</p>
+                      <p>&nbsp;</p>
+                      <p>&nbsp;</p>
+                    </div>
+               </div>
+            </div>
+            <div class="clear"></div>
+            <div class="container templatemo_hexteam s_top">
+            	<div class="row">
+                   <div class="col-md-3 col-sm-4 hidden-sm hidden-md hidden-lg">
+                        	 <div class="hexagon hexagonteam gallery-item">
+                               <div class="hexagon-in1">
+                                <div class="hexagon-in2" style="background-image: url(images/team/charlotte.png);">
+								<div class="clear"></div>
+                                </div>
+                            </div>
+                          </div>
+  			       </div>
+                    <div class="col-sm-8 templatemo_servicetxt" >
+                      <h2>Charlotte Hennington, VP Operations and Logistics</h2>
+                      <p>Charlotte graduated from the University of Southern California’s prestigious film school in 2008, and brings her unique visual eye to The Casery. Her experience at WME Entertainment gives her the ability to organize and drive our fast-paced environment. Charlotte’s background in journalism and education make her our resident wordsmith, and her ability to break through logistical boundaries makes her an integral member of the Creative Design Team. </p>
+                    </div>
+                    <div class="col-md-3 col-sm-4 hidden-xs">
+                        	 <div class="hexagon hexagonteam gallery-item">
+                               <div class="hexagon-in1">
+                                <div class="hexagon-in2" style="background-image: url(images/team/charlotte.png);">
+								<div class="clear"></div>
+                                </div>
+                            </div>
+                          </div>
+  			       </div>
+               </div>
+            </div>
+            <div class="clear"></div>
+            <div class="container templatemo_hexteam s_top">
+            	<div class="row">
+                	<div class="col-md-3 col-sm-4">
+                        	 <div class="hexagon hexagonteam gallery-item">
+                               <div class="hexagon-in1">
+                                <div class="hexagon-in2" style="background-image: url(images/team/jason.jpg);">
+								<div class="clear"></div>
+                                </div>
+                            </div>
+                          </div>
+  			       </div>
+                    <div class="col-sm-8 templatemo_servicetxt" >
+                      <h2>Jason Parnass, Business Development Intern</h2>
+                      <p>Jason is finishing his Masters in Applied Psychology with a focus on product and market research at the University of Southern California with a 3.85 GPA. He has extensive experience as a lead study coordinator and project manager for VA Healthcare System. He currently facilitates The Casery’s decision-making process by maintaining multiple large research databases and improving and innovating protocols and procedures. An avid hiker and chess player, Jason brings his market research skills and sense of humor to The Casery.</p>
+                    </div>
+                    <div class="templatemo_servicecol2">
+                    </div>
+               </div>
+            </div>
+            <div class="clear"></div>
+            <div class="container templatemo_hexteam s_top">
+            	<div class="row">
+                	<div class="col-md-3 col-sm-4 hidden-sm hidden-md hidden-lg">
+                        	 <div class="hexagon hexagonteam gallery-item">
+                               <div class="hexagon-in1">
+                                <div class="hexagon-in2" style="background-image: url(images/team/Nico.jpg);">
+								<div class="clear"></div>
+                                </div>
+                            </div>
+                          </div>
+  			       </div>
+                    <div class="col-sm-8 templatemo_servicetxt" >
+                      <h2>Nico, Financial Manager</h2>
+                      <p>Nico is a published mathematician from the University of California, Davis and is actively pursuing his CPA with the University of California, Los Angeles.  As a senior accountant for a mid-sized management company and a major conglomerate, he is experienced in high-volume transactions and multi-entity cash flow management. To supplement his analytical skills, Nico is also a classically trained acrylic painter, pastel artist, and choral singer.  Nico is an integral part of The Casery who is not only adept at bottom-line accounting but also understands that the journey is as important as the goal. </p>
+                  </div>
+                    <div class="col-md-3 col-sm-4 hidden-xs">
+                        	 <div class="hexagon hexagonteam gallery-item">
+                               <div class="hexagon-in1">
+                                <div class="hexagon-in2" style="background-image: url(images/team/Nico.jpg);">
+								<div class="clear"></div>
+                                </div>
+                            </div>
+                          </div>
+  			       </div>
+               </div>
+            </div>
+            
+     </div>
+    </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="about" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                  <h2 class="section-heading">contest</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                  <p>We are a young Southern California start-up company looking to expand our network and working relationship with the local, national and international art community. To achieve this goal, we are currently running a competition looking for the best and most creative designs suited for a cell phone case. Any medium will do and all our welcome to submit an unlimited number of designs. We ask that your designs follow the rules outlined in our terms and conditions but most importantly we want designs that you would enjoy seeing or having on your own phone case. </p>
+                  <p> Submission must be: </p>
+                  <p> -	6.5in. x 3.15in. (min. 600 dpi) </p>
+                  <p> -	3900 x 1900 pixels minimum </p>
+                  <p> -	flattened psd, png, jpeg or gif </p>
+                  <p> For inspiration please visit our accounts </p>
+                  <p><a href="https://instagram.com/thecaserycompetition/"><i class="fa fa-instagram"></i> @TheCaseryCompetition</a></p>
+                  <p><a href="https://www.pinterest.com/thecaserycomp/the-casery-contest-inspiration/"><i class="fa fa-pinterest"></i> @thecaserycomp</a></p>
+                </div>
+                <div class="col-md-6">
+                	<!--
+                    <form action="upload.php" method="post" enctype="multipart/form-data">
+                        Select image to upload:
+                        <input type="file" name="fileToUpload" id="fileToUpload">
+                        <input type="submit" value="Upload Image" name="submit">
+                    </form>
+                    -->
+                	<form action="/uploadfile/upload.php" method="post" enctype="multipart/form-data" name="uploadfile">
+                				<div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Your Name *" id="cname" required data-validation-required-message="Please enter your name.">
+                                    <p class="help-block text-danger"></p>
+                            	</div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Your Email *" id="cemail" required data-validation-required-message="Please enter your email address.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" placeholder="Submission Title *" id="ctitle" required data-validation-required-message="Please enter your phone number.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                   
+                                        Select File to upload:
+                                        <input type="file" name="fileToUpload" id="fileToUpload">
+                             
+                                    
+                                </div>
+                               			
+
+
+                                      <div id="terms-pane">
+                                          <h4><strong><font color="black">"THE CASERY" DESIGN CONTEST:</font></strong></h4>
+                                      <p>TERMS &amp; CONDITIONS </p>
+                                        <p> 1.	Age Requirement 
+                                          
+                                          This online competition is open to all artists 18 years of age or older. </p>
+                                        <p> 2.	Contest Duration
+                                          
+                                          This competition will begin on August 6, 2015, and will run until midnight on August 31, 2015. </p>
+                                        <p> 3.	Contest Participants
+                                          
+                                          The pool of potential participants will be drawn from various social media platforms (i.e Facebook, Twitter, Instagram and Snapchat); colleges around the Los Angeles Area; and Craigslist Posts. We are accepting up to 500 unique submissions. </p>
+                                        <p> 4.	Submission Requirements 
+                                          
+                                          We are looking for colorful, modern, original artwork for our target demographic of 14 to 27 year olds. 
+                                          
+                                          Prohibited Content:
+                                          All submissions containing any of the following will be immediately disqualified and ineligible to win the contest:
+                                          
+                                          -	Cursing
+                                          -	Offensive language/innuendos/scenarios
+                                          -    Death, blood, or violence 
+                                          -	Gang related themes 
+                                          -	Pornographic imagery </p>
+                                        <p> 5.	Work Must Be Original
+                                          
+                                          You must be the creator of the art that you submit to the competition. Your art must be your own original concept and not a copy of anyone else's copyrighted material. If your image infringes upon another person or entity's copyright(s), it will be immediately disqualified. Upon submitting your work to this competition, you are solely responsible for any infringement on copyrighted materials.</p>
+                                        <p> 6.	Extended Permission Required
+                                          
+                                          If the work of your submission is not solely yours, you must obtain and provide written permission from any owner of the work that you may submit the work to this contest and in compliance with all of the rules in these Terms and Conditions. </p>
+                                        <p> 7.	Entry Fees
+                                          
+                                          There is no entry fee or purchase necessary to enter this competition.</p>
+                                        <p> 8.	Repeat Entries
+                                          
+                                          Contestant are allowed to make multiple unique submissions to the current competition as long as the person submitting the entry has full legal ownership of the design.</p>
+                                        <p> 9.	Copyright 
+                                          
+                                        Custom Vending Solutions, Inc. (dba "The Casery") will own all copyrights to all "winning" submission designs that are selected for production and produced for consumer sales by The Casery. </p>
+                                        <p>10.	Choosing the Winner
+                                          
+                                          Up to 60 "winning designs" will be chosen from the submitted artwork. A pre-selected committee of four individuals will select the winning designs.</p>
+                                        <p>11.	Payment Compensation 
+                                          
+                                          All artists of "winning designs" will be compensated by check in accordance with the dollar amounts listed below.  Winning artists will be compensated the agreed upon amount, regardless of how much or how little of their "winning design" is used in commerce. </p>
+                                        <p> 1st place - USD $500.00 </p>
+                                        <p> 2nd-5th place - USD $200.00 </p>
+                                        <p> 6th-60th place - USD $50.00 </p>
+                                        <p> 12.	Choice of Law
+                                          
+                                          Any disputes arising out of this agreement will be governed by the law of the state of California and shall be settled first by mediation, then if unsuccessful, by arbitration, in Los Angeles County, California. </p>
+                                        <p> 13.	Acknowledgement </p>
+                                        <p> By submitting an entry to this competition, contestant agrees to the terms and conditions above. </p>
+                                          <input type="checkbox" name="terms" id="terms" onchange="activateButton(this)"><strong><font color="black">  I Agree Terms & Coditions</font></strong>
+                                    </div> 
+                                
+                               
+                                <div class="form-group">
+                                    <textarea class="form-control" placeholder="signature *" id="csignature" required data-validation-required-message="Please enter a signature."></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div id="signature"></div>
+                                <div>
+                                	<input type="submit" class="btn btn-xl submit" value="Submit" name="submit" id="submit" disabled>
+                                </div>
+                	</form>
+                   
+                </div>
+			</div>
+            <!--<div class="row">
+				<div class="col-sm-4"> </div>
+                <div class="col-sm-4"> </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                  <p class="large text-muted">&nbsp;</p>
+                </div>
+            </div>
+            -->
+        </div>
+    </section>
+
+    <!-- Clients Aside -->
+    <!-- 
+    <aside class="clients">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <a href="#">
+                        <img src="#" class="img-responsive img-centered" alt="">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <a href="#">
+                        <img src="#" class="img-responsive img-centered" alt="">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <a href="#">
+                        <img src="#" class="img-responsive img-centered" alt="">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <a href="#">
+                        <img src="#" class="img-responsive img-centered" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </aside>
+    -->
+    
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Contact Us</h2>
+                    
+                </div>
+            </div>
+            <div class="container">
+            <div class="row">    
+                <div class="col-lg-12">
+                    <form name="sentMessage" id="contactForm" novalidate>
+                        
+                            <div class="col-md-6 col-sm-12">
+                            <p class="text-muted">3020 PICO BLVD. SUITE B SANTA MONICA, CA 90405</p>
+                              <div id="map_canvas"></div>
+                            </div>
+                          <div class="col-md-6">
+                            	 <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Your Name *" id="name" required data-validation-required-message="Please enter your name.">
+                                    <p class="help-block text-danger"></p>
+                            </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Your Email *" id="email" required data-validation-required-message="Please enter your email address.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" placeholder="Your Phone *" id="phone" required data-validation-required-message="Please enter your phone number.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" placeholder="Your Message *" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-lg-12 text-center">
+                                <div id="success"></div>
+                                <button type="submit" class="btn btn-xl">Send Message</button>
+                            </div>
+                        
+                    </form>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4"><span class="copyright">Copyright &copy; thecasery 2015</span></div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                    	<li><a href="https://www.pinterest.com/thecasery/"><i class="fa fa-pinterest"></i></a>
+                        </li>
+                        <li><a href="https://twitter.com/thecasery"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li><a href="https://www.facebook.com/thecasery"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li><a href="https://instagram.com/thecasery/"><i class="fa fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline quicklinks">
+                        <li><a href="#">Privacy Policy</a>
+                        </li>
+                        <li><a href="#">Terms of Use</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Portfolio Modals -->
+    <!-- Use the modals below to showcase details about your portfolio projects! -->
+
+    <!-- Portfolio Modal 1 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>Project Name</h2>
+                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                            <img class="img-responsive img-centered" src="img/portfolio/roundicons-free.png" alt="">
+                            <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                            <p>
+                                <strong>Want these icons in this portfolio item sample?</strong>You can download 60 of them for free, courtesy of <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">RoundIcons.com</a>, or you can purchase the 1500 icon set <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">here</a>.</p>
+                            <ul class="list-inline">
+                                <li>Date: July 2014</li>
+                                <li>Client: Round Icons</li>
+                                <li>Category: Graphic Design</li>
+                            </ul>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal 2 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Project Heading</h2>
+                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                            <img class="img-responsive img-centered" src="img/portfolio/startup-framework-preview.png" alt="">
+                            <p><a href="http://designmodo.com/startup/?u=787">Startup Framework</a> is a website builder for professionals. Startup Framework contains components and complex blocks (PSD+HTML Bootstrap themes and templates) which can easily be integrated into almost any design. All of these components are made in the same style, and can easily be integrated into projects, allowing you to create hundreds of solutions for your future projects.</p>
+                            <p>You can preview Startup Framework <a href="http://designmodo.com/startup/?u=787">here</a>.</p>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal 3 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>Project Name</h2>
+                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                            <img class="img-responsive img-centered" src="img/portfolio/treehouse-preview.png" alt="">
+                            <p>Treehouse is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. This is bright and spacious design perfect for people or startup companies looking to showcase their apps or other projects.</p>
+                            <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/treehouse-free-psd-web-template/">FreebiesXpress.com</a>.</p>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal 4 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>Project Name</h2>
+                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                            <img class="img-responsive img-centered" src="img/portfolio/golden-preview.png" alt="">
+                            <p>Start Bootstrap's Agency theme is based on Golden, a free PSD website template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Golden is a modern and clean one page web template that was made exclusively for Best PSD Freebies. This template has a great portfolio, timeline, and meet your team sections that can be easily modified to fit your needs.</p>
+                            <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/golden-free-one-page-web-template/">FreebiesXpress.com</a>.</p>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal 5 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>Project Name</h2>
+                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                            <img class="img-responsive img-centered" src="img/portfolio/escape-preview.png" alt="">
+                            <p>Escape is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Escape is a one page web template that was designed with agencies in mind. This template is ideal for those looking for a simple one page solution to describe your business and offer your services.</p>
+                            <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/escape-one-page-psd-web-template/">FreebiesXpress.com</a>.</p>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal 6 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>Project Name</h2>
+                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                            <img class="img-responsive img-centered" src="img/portfolio/dreams-preview.png" alt="">
+                            <p>Dreams is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Dreams is a modern one page web template designed for almost any purpose. It’s a beautiful template that’s designed with the Bootstrap framework in mind.</p>
+                            <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/dreams-free-one-page-web-template/">FreebiesXpress.com</a>.</p>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/agency.js"></script>
+    
+    
+
+</body>
+
+</html>
